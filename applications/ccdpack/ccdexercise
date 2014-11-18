@@ -110,7 +110,7 @@
 
 #  If we're going to use a device we need KAPPA.
       if ( "$device" != "NONE" ) then
-         kappa
+         source $KAPPA_DIR/kappa.csh
          gdset $device \\
          gdclear \\
          paldef \\
@@ -257,7 +257,7 @@
       echo " "
       echo "  Adding a note to the logfile. "
       echo " "
-      set name = `who am i`
+      set name = `whoami`
       ccdnote \
          '"'$name : exercising CCDPACK'"' \
          accept
